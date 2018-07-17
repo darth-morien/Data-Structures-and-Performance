@@ -1,0 +1,25 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+
+public class QuizTest {
+	
+	Quiz quiz= new Quiz("one (1), two (2), three (3)");
+
+	@Test
+	public void testQuiz() {
+		List<String> expected = Arrays.asList("one", "(1)", "two", "(2)", "three", "(3)");
+		assertEquals(expected, quiz.quiz("one (1), two (2), three (3)"));
+	}
+	
+	@Test
+	public void testQuizConcat() {
+		
+		assertEquals("My String", quiz.quizConcat());
+	}
+}
