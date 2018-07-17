@@ -114,35 +114,7 @@ public class MyLinkedListTester {
 		assertEquals("Remove: check element 0 is correct ", (Integer)21, list1.get(0));
 		assertEquals("Remove: check size is correct ", 2, list1.size());
 		
-		assertEquals("Remove: check element 1 is correct ", (Integer)42, list1.get(1));
-		
-		try {
-			list1.remove(2);
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		
 		// TODO: Add more tests here
-		MyLinkedList<String> removeListEmpty = new MyLinkedList<String>();
-		
-		try {
-			removeListEmpty.remove(-1);
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		try {
-			removeListEmpty.remove(0);
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		try {
-			removeListEmpty.remove(10);
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
 	}
 	
 	/** Test adding an element into the end of the list, specifically
@@ -153,9 +125,9 @@ public class MyLinkedListTester {
 	{
 		MyLinkedList<String> addList = new MyLinkedList<String>();
 		addList.add("Add");
-		assertEquals(1, addList.size());
-		assertEquals(0, emptyList.size());
-		assertEquals(2, shortList.size());
+		assertEquals(1, addList.size);
+		assertEquals(0, emptyList.size);
+		assertEquals(2, shortList.size);
 
 		assertEquals("Add", addList.get(0));
 		assertEquals("B", shortList.get(1));
@@ -176,9 +148,6 @@ public class MyLinkedListTester {
 		assertEquals(0, emptyList.size());
 		assertEquals(2, shortList.size());
 		assertEquals(LONG_LIST_LENGTH, longerList.size());
-		assertEquals(emptyList.size, emptyList.size());
-		assertEquals(shortList.size, shortList.size());
-		assertEquals(longerList.size, longerList.size());
 		
 	}
 
@@ -199,7 +168,7 @@ public class MyLinkedListTester {
 		}*/
 		addIndListEmpty.add(0, "Add");
 		assertEquals("Add", addIndListEmpty.get(0));
-		assertEquals(1, addIndListEmpty.size());
+		assertEquals(1, addIndListEmpty.size);
 		
 		try {
 			addIndListEmpty.add(10, "Add");
@@ -215,7 +184,7 @@ public class MyLinkedListTester {
 		assertEquals("Shift", addIndListZeroShift.get(0));
 		assertEquals("Zero", addIndListZeroShift.get(1));
 		assertEquals("One", addIndListZeroShift.get(2));
-		assertEquals(3, addIndListZeroShift.size());
+		assertEquals(3, addIndListZeroShift.size);
 		
 		MyLinkedList<String> addIndListOneShift = new MyLinkedList<String>();
 		addIndListOneShift.add("Zero");
@@ -227,7 +196,7 @@ public class MyLinkedListTester {
 		assertEquals("Zero", addIndListOneShift.get(0));
 		assertEquals("One", addIndListOneShift.get(2));
 		assertEquals("Two", addIndListOneShift.get(3));
-		assertEquals(4, addIndListOneShift.size());
+		assertEquals(4, addIndListOneShift.size);
 		
 		MyLinkedList<String> addIndListFirst = new MyLinkedList<String>();
 		addIndListFirst.add("Add");
@@ -252,7 +221,7 @@ public class MyLinkedListTester {
 		
 		addIndListFirst.add(1, "Last");
 		assertEquals("Last", addIndListFirst.get(1));
-		assertEquals(2, addIndListFirst.size());
+		assertEquals(2, addIndListFirst.size);
 		
 		try {
 			addIndListFirst.add(3, "Dont");

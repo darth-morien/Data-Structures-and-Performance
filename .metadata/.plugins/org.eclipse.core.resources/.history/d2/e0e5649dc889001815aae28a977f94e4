@@ -114,15 +114,6 @@ public class MyLinkedListTester {
 		assertEquals("Remove: check element 0 is correct ", (Integer)21, list1.get(0));
 		assertEquals("Remove: check size is correct ", 2, list1.size());
 		
-		assertEquals("Remove: check element 1 is correct ", (Integer)42, list1.get(1));
-		
-		try {
-			list1.remove(2);
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		
 		// TODO: Add more tests here
 		MyLinkedList<String> removeListEmpty = new MyLinkedList<String>();
 		

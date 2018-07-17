@@ -145,19 +145,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
     	if (index < 0 || (index >= size())) {
 			throw new IndexOutOfBoundsException("Index does not exist");
 		}
-    	
-    	LLNode<E> nodeAtIndex = head;
-		for (int i = 0; i <= index; i++) {
-			nodeAtIndex = nodeAtIndex.next;
-		}
-		
-		nodeAtIndex.next.prev=nodeAtIndex.prev;
-		nodeAtIndex.prev.next=nodeAtIndex.next;
-		
-		size--;
-
-    	
-		return nodeAtIndex.data;
+		return null;
 	}
 
 	/**
