@@ -161,11 +161,14 @@ public class MyLinkedListTester {
 	public void testAddAtIndex()
 	{
 		MyLinkedList<String> addIndListEmpty = new MyLinkedList<String>();
-		try {
+		/*try {
 			addIndListEmpty.add(0, "Add");
 			fail("Out of bound allowed");
 		} catch (IndexOutOfBoundsException e) {
-		}
+		}*/
+		addIndListEmpty.add(0, "Add");
+		assertEquals("Add", addIndListEmpty.get(0));
+		assertEquals(1, addIndListEmpty.size);
 		
 		try {
 			addIndListEmpty.add(10, "Add");
@@ -216,9 +219,12 @@ public class MyLinkedListTester {
 		} catch (IndexOutOfBoundsException e) {
 		}
 		
+		addIndListFirst.add(1, "Last");
+		assertEquals("Last", addIndListFirst.get(1));
+		assertEquals(2, addIndListFirst.size);
 		
 		try {
-			addIndListFirst.add(1, "Dont");
+			addIndListFirst.add(3, "Dont");
 			fail("Out of bound");
 		} catch (IndexOutOfBoundsException e) {
 		}

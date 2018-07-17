@@ -1,0 +1,14 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BasicDocumentTest extends BasicDocument {
+
+	@Test
+	public void testGetNumSyllables() {
+		fail("Not yet implemented");
+	}
+
+}

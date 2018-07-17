@@ -1,0 +1,33 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BasicDocumentTest extends BasicDocument {
+		
+	public BasicDocumentTest() {
+		super("Test");
+		
+	}
+
+	BasicDocument doc= new BasicDocument("Test");
+	
+	@Test
+	public void testGetNumSyllables() {
+		//assertEquals(3, doc.countSyllables("Hello world!"));
+		//assertEquals(32, doc.countSyllables("Lorem ipsum dolor sit amet, qui ex choro quodsi moderatius, nam dolores explicari forensibus ad."));
+	}
+	
+	@Test
+	public void testGetNumSyllablesMore() {
+		assertEquals(32, doc.countSyllables("Lorem ipsum dolor sit amet, qui ex choro quodsi moderatius, nam dolores explicari forensibus ad."));
+	}
+	
+	@Test
+	public void testGetNumSyllablesMore1() {
+		assertEquals(31, doc.countSyllables("Lorem ipsum dolor sit amet, qui ex choro quodsi moderatius, nam dolores explicari forensibus."));
+	}
+	
+
+}

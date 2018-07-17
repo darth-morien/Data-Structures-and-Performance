@@ -1,0 +1,14 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class QuizTest {
+
+	@Test
+	public void testQuiz() {
+		fail("Not yet implemented");
+	}
+
+}

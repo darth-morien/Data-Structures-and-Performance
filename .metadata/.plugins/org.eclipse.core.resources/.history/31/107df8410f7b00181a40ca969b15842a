@@ -1,0 +1,20 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BasicDocumentTest extends BasicDocument {
+
+	public BasicDocumentTest(String text) {
+		super(text);
+			}
+	
+	BasicDocument doc= new BasicDocument("Test");
+	
+	@Test
+	public void testGetNumSyllables() {
+		assertEquals(3, doc.countSyllables("Hello world!"));
+	}
+
+}

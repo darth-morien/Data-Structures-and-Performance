@@ -89,15 +89,13 @@ public class MyLinkedList<E> extends AbstractList<E> {
 			throw new NullPointerException();
 		}
 
-    	if (index < 0 || (index > size-1)) {
-	//	if ((index < 0 || index > size - 1) && (index != 0 || size != 0)) {
+    	if (index < 0 || (index > size)) {
 			throw new IndexOutOfBoundsException("Index does not exist");
 		}
 		
-		if (size==0) {
-			//add(element);
-			throw new IndexOutOfBoundsException("List is empty");
-		} //else {
+		if (size==index) {
+			add(element);
+			} else {
 
 		LLNode<E> newNode = new LLNode<E>(element);
 
@@ -123,7 +121,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 //		nodeAtIndex.prev.next=nodeAtIndex;
 		
 		size++;
-		//}
+		}
 	}
 
 

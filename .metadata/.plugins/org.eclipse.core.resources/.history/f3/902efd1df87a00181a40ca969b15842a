@@ -1,0 +1,19 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DocumentTest {
+
+	@Test
+	public void testIsVowel() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetNumSyllables() {
+		fail("Not yet implemented");
+	}
+
+}

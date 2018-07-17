@@ -1,0 +1,46 @@
+package document;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DocumentTest {
+	
+	Document doc= new Document("Test") {
+		
+		@Override
+		public int getNumWords() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public int getNumSyllables() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public int getNumSentences() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+	};
+
+	@Test
+	public void testIsVowel() {
+		
+		assertTrue(doc.isVowel("Test", 1));
+		assertTrue(doc.isVowel("Equals", 0));
+		assertFalse(doc.isVowel("Test", 0));
+		assertFalse(doc.isVowel("Equals", 4));
+		assertTrue(doc.isVowel("Equals", 2));
+		assertFalse(doc.isVowel("", 0));
+	}
+
+	@Test
+	public void testGetNumSyllables() {
+		fail("Not yet implemented");
+	}
+
+}
