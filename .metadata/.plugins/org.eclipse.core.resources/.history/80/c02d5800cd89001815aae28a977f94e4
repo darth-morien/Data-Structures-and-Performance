@@ -265,43 +265,7 @@ public class MyLinkedListTester {
 	@Test
 	public void testSet()
 	{
-	    // happy path
-		MyLinkedList<String> setList = new MyLinkedList<String>();
-		setList.add("Zero");
-		setList.add("One");
-		setList.set(0, "SetZero");
-		assertEquals("SetZero", setList.get(0));
-		assertEquals("One", setList.get(1));
-		assertEquals(2, setList.size());
-		
-		try {
-			setList.set(2, "No such index");
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		try {
-			setList.set(1, null);
-			fail("Nullpointer");
-		} catch (NullPointerException e) {
-		}
-		
-		MyLinkedList<String> setListEmpty = new MyLinkedList<String>();
-		
-		try {
-			setListEmpty.set(-1, "No way");
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-			
-		try {
-			setListEmpty.set(0, "No way");
-			fail("Out of bound allowed");
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		
-		
+	    // TODO: implement this test
 	    
 	}
 	
